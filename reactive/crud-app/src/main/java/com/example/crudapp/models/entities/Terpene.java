@@ -3,9 +3,11 @@ package com.example.crudapp.models.entities;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.example.crudapp.models.enums.ScentEnum;
@@ -24,7 +26,8 @@ public class Terpene extends PanacheEntityBase {
     @Column
     private ScentEnum scent;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "hop_id")
     private Hop hop;
 
     public Long getId() {
