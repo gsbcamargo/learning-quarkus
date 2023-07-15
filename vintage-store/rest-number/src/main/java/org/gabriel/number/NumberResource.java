@@ -14,7 +14,8 @@ import jakarta.ws.rs.core.MediaType;
 public class NumberResource {
 
     @Inject
-    Logger logger;
+    private static final Logger logger = Logger.getLogger(NumberResource.class.getName());
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
