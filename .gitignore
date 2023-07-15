@@ -160,3 +160,7 @@ buildNumber.properties
 # Ignore config for Eclipse PDE in VS Code until we get remote repositories working
 javaConfig.json
 **/*.target
+
+# Visual Studio Code
+.vscode
+.factorypath
