@@ -2,10 +2,20 @@ package org.gabriel.number;
 
 import java.time.Instant;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.json.bind.annotation.JsonbProperty;
+import jakarta.json.bind.annotation.JsonbTransient;
+
 public class IsbnNumbers {
 
+    @JsonbProperty("isbn_10")
     public String isbn10;
+
+    @JsonbProperty("isbn_13")
     public String isbn13;
+
+    @JsonbTransient
     public Instant generationDate;
 
     public String getIsbn10() {

@@ -4,6 +4,8 @@ import java.time.Instant;
 import java.util.Random;
 import java.util.logging.Logger;
 
+import org.eclipse.microprofile.openapi.annotations.Operation;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -18,6 +20,7 @@ public class NumberResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Generates book numbers (ISBN10 and ISBN13)")
     public IsbnNumbers generateIsbnNumbers() {
         IsbnNumbers isbnNumbers = new IsbnNumbers();
         isbnNumbers.isbn13 = "13-" + new Random().nextInt(100_000_000);
