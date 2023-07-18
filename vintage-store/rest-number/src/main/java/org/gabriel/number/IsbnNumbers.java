@@ -2,16 +2,21 @@ package org.gabriel.number;
 
 import java.time.Instant;
 
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.json.bind.annotation.JsonbProperty;
 import jakarta.json.bind.annotation.JsonbTransient;
 
+@Schema(description = "Several ISBN numbers for books")
 public class IsbnNumbers {
 
+    @Schema(required = true)
     @JsonbProperty("isbn_10")
     public String isbn10;
 
+    @Schema(required = true)
     @JsonbProperty("isbn_13")
     public String isbn13;
 
