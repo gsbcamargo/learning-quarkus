@@ -50,9 +50,9 @@ public class IsbnNumbers {
     @Override
     public String toString() {
         return "IsbnNumbers{" +
-                "isbn13='" + isbn13 + '\'' +
-                ", isbn10='" + isbn10 + '\'' +
-                ", generationDate=" + generationDate +
-                '}';
+                "\"isbn13\":" + "\"" + isbn13 + "\"" + 
+                ", \"isbn10\":" + "\"" + isbn10 + "\"" +
+                ", \"generationDate\":" + "\"" + generationDate + "\"" +
+                "}";
     }
 }
